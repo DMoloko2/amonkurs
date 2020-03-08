@@ -1,68 +1,76 @@
 <html>
 <head>
   <title>Логин </title>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
 <style type="text/css">
+  html,body {  height: 100%;}
+
   body {
-    margin: 0;
-    padding: 0;
-    background-color: #17a2b8;
-    height: 100vh;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
   }
-  #login .container #login-row #login-column #login-box {
-    margin-top: 120px;
-    max-width: 600px;
-    height: 320px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
+
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
   }
-  #login .container #login-row #login-column #login-box #login-form {
-    padding: 20px;
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
   }
-  #login .container #login-row #login-column #login-box #login-form #register-link {
-    margin-top: -85px;
-}
+  .form-signin .form-control:focus {  z-index: 2;}
+  .form-signin .custom-select {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
  </style>
 <!------ Include the above in your HEAD tag ---------->
 </heat>
-<body>
+<body class="text-center">
+    <form class="form-signin" action="/Main_controllers/select">
+      <!-- <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+      <h1 class="h3 mb-3 font-weight-normal">Авторизируйтесь</h1>
+      <select id="inputEmail" class="form-control" autofocus="">
+        <option selected value="0">Выберите ...</option>
+        <option value="1">Mustard</option>
+        <option value="2">Ketchup</option>
+        <option value="3">Relish</option>
+      </select>
 
-    <div id="login">
-        <h3 class="text-center text-white pt-5">Название дипломного проекта</h3>
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-info">Авторизация</h3>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Выберете пользователя: </label><br>
-                                <!-- <input type="text" name="username" id="username" class="form-control">
-                                -->
-                                <div class="input-group mb-3">
-                                  <select class="custom-select" id="inputGroupSelect01">
-                                    <option selected>Выберите</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
-                                </div>
-
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Пароль: </label><br>
-                                <input type="text" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Войти">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+      <label for="inputPassword" class="sr-only">Пароль</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+    </form>
+  </body>
 </html>
