@@ -63,9 +63,9 @@
       <h1 class="h3 mb-3 font-weight-normal">Авторизируйтесь</h1>
       <select id="inputEmail" class="form-control" autofocus="">
         <option selected value="0">Выберите ...</option>
-        <option value="1">Mustard</option>
-        <option value="2">Ketchup</option>
-        <option value="3">Relish</option>
+        <?php foreach ($users as  $value): ?>
+          <option value="<?php echo $value->id_people; ?>"><?php echo $value->rank . ' ' . $value->fio; ?></option>
+        <?php endforeach; ?>
       </select>
 
       <label for="inputPassword" class="sr-only">Пароль</label>
