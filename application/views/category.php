@@ -33,7 +33,7 @@
 
   <body>
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">Выбор теста</h1>
+      <h1 class="display-4"><?php echo $user_info[0]->rank . ' '. $user_info[0]->fio  ?></h1>
       <!-- <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p> -->
     </div>
 
@@ -46,10 +46,11 @@
           <div class="card-body">
             <h4 class="">Тест по основам РХБЗ</h4>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Вы прошли тест:</li>
-              <li>Дата:результат</li>
-              <li>Дата:результат</li>
-              <li>Дата:результат</li>
+              <?php foreach ($result_test as $key): ?>
+                <?php if ($key->id_qestion == 1): ?>
+                  <li>Дата:<?php echo $key->data ?> Результат: <?php echo $key->number_right . "/" . $key->number_all ?> </li>
+                <?php endif; ?>
+              <?php endforeach; ?>
             </ul>
             <a class="btn btn-lg btn-block btn-outline-primary botcls" href="/amoncurs/Main_controllers/showtest?idUser=<?php echo $idUser ?>&idCategory=1">Пройти тест</a>
           </div>
@@ -64,10 +65,11 @@
           <div class="card-body">
             <h4 class="card-title pricing-card-title">Тест по основам огневой подготовки</h4>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Вы прошли тест:</li>
-              <li>Дата:результат</li>
-              <li>Дата:результат</li>
-              <li>Дата:результат</li>
+              <?php foreach ($result_test as $key): ?>
+                <?php if ($key->id_qestion == 2): ?>
+                  <li>Дата:<?php echo $key->data ?> Результат: <?php echo $key->number_right . "/" . $key->number_all ?> </li>
+                <?php endif; ?>
+              <?php endforeach; ?>
             </ul>
             <a class="btn btn-lg btn-block btn-outline-primary" href="/amoncurs/Main_controllers/showtest?idUser=<?php echo $idUser ?>&idCategory=2">Пройти тест</a>
           </div>

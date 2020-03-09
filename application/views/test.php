@@ -31,13 +31,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 order-md-1">
-        <h4 class="mb-3"><?php echo $test[0]->name; ?></h4> <!-- СЮДА ВСТАВИТЬ НАЗВАНИЕ ТЕСТА -->
+        <h4 class="mb-3"><?php $i = 0; echo $test[0]->name; ?></h4> <!-- СЮДА ВСТАВИТЬ НАЗВАНИЕ ТЕСТА -->
           <form id="idDataForm" method="post">
 
             <?php foreach ($test as  $value): ?>
               <div class="form-group">
                 <label><?php echo $value->question; ?></label>
-                <select class="form-control" name="<?php echo $value->id_test ?>">
+                <select class="form-control" name="<?php echo $i; $i++; ?>">
                   <option value="<?php echo $value->correct_answer ?>"><?php echo $value->correct_answer ?></option>
                   <option value="<?php echo $value->answer_1 ?>"><?php echo $value->answer_1 ?></option>
                   <option value="<?php echo $value->answer_2 ?>"><?php echo $value->answer_2 ?></option>
@@ -48,7 +48,7 @@
           </form>
 
           <hr class="mb-4">
-          <button class="btn btn-lg btn-block btn-outline-primary" type="submit" form="idDataForm" formaction="/amoncurs/Main_controllers/testValidate">Готово</button>
+          <button class="btn btn-lg btn-block btn-outline-primary" type="submit" form="idDataForm" formaction="/amoncurs/Main_controllers/testValidate?idUser=<?php echo $idUser; ?>&idTest=<?php echo $test[0]->id_test; ?>">Готово</button>
       </div>
     </div>
   </div>
