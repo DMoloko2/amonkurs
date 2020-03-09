@@ -8,7 +8,7 @@ class Main_controllers extends CI_Controller {
 		$data['users'] = $this->User_model->get_users();
 		$this->load->view('login.php',$data);
 	}
-	public function select()
+	public function showtest()
 	{
 		$this->load->model('User_model');
 		$test = $this->User_model->select_test(1);
@@ -23,7 +23,11 @@ class Main_controllers extends CI_Controller {
 		}
 		print_r($test);
 		//$this->load->view('login.php');
-
+	}
+	public function select()
+	{
+			$data['idUser'] = $this->input->post('nameUser');
+			$this->load->view('category.php');
 	}
 }
 ?>
