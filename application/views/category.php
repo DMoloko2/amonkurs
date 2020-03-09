@@ -51,7 +51,7 @@
               <li>Дата:результат</li>
               <li>Дата:результат</li>
             </ul>
-            <a class="btn btn-lg btn-block btn-outline-primary botcls" href="#">Пройти тест</a>
+            <a class="btn btn-lg btn-block btn-outline-primary botcls" href="/amoncurs/Main_controllers/showtest?idUser=<?php echo $idUser ?>&idCategory=1">Пройти тест</a>
           </div>
         </div>
 
@@ -69,7 +69,7 @@
               <li>Дата:результат</li>
               <li>Дата:результат</li>
             </ul>
-            <a class="btn btn-lg btn-block btn-outline-primary" href="#">Пройти тест</a>
+            <a class="btn btn-lg btn-block btn-outline-primary" href="/amoncurs/Main_controllers/showtest?idUser=<?php echo $idUser ?>&idCategory=2">Пройти тест</a>
           </div>
         </div>
 

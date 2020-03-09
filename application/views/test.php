@@ -31,27 +31,19 @@
     <div class="container">
   <div class="row">
     <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">test->name(test.id_test из question.category)</h4> <!-- СЮДА ВСТАВИТЬ НАЗВАНИЕ ТЕСТА -->
+      <h4 class="mb-3"><?php echo $test[0]->name; ?></h4> <!-- СЮДА ВСТАВИТЬ НАЗВАНИЕ ТЕСТА -->
         <form>
 
-
-          <div class="form-group">
-            <label>Вопрос (question.question, где question.category == test.id_test)</label>
-            <select class="form-control">
-              <option>Ответ 1</option>
-              <option>Ответ 2</option>
-              <option>Ответ 3</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">TEST </label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
+          <?php foreach ($test as  $value): ?>
+            <div class="form-group">
+              <label><?php echo $value->question; ?></label>
+              <select class="form-control" name="<?php echo $value->id_test ?>">
+                <option value="<?php echo $value->correct_answer ?>"><?php echo $value->correct_answer ?></option>
+                <option value="<?php echo $value->answer_1 ?>"><?php echo $value->answer_1 ?></option>
+                <option value="<?php echo $value->answer_2 ?>"><?php echo $value->answer_2 ?></option>
+              </select>
+            </div>
+          <?php endforeach; ?>
 
         </form>
 

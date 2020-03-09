@@ -11,7 +11,7 @@ class Main_controllers extends CI_Controller {
 	public function showtest()
 	{
 		$this->load->model('User_model');
-		$test = $this->User_model->select_test(1);
+		$test = $this->User_model->select_test($this->input->get('idCategory'));
 		foreach ($test as $key) {
 			$arr[0] = $key->correct_answer;
 			$arr[1] = $key->answer_1;
@@ -21,13 +21,15 @@ class Main_controllers extends CI_Controller {
 			$key->answer_1 = $arr[1];
 			$key->answer_2 = $arr[2];
 		}
-		print_r($test);
-		//$this->load->view('login.php');
+		//print_r($test);
+		$data['test'] = $test;
+			// print_r($data['test'][0]->name);
+		$this->load->view('test.php',$data);
 	}
 	public function select()
 	{
-			$data['idUser'] = $this->input->post('nameUser');
-			$this->load->view('category.php');
+			$data['idUser'] = $this->input->post('idUser');
+			$this->load->view('category.php',$data);
 	}
 }
 ?>

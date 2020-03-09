@@ -12,7 +12,7 @@
   public function select_test($category)
   {
     $this->load->database();
-     $result = $this->db->query("SELECT * FROM test.question WHERE category  = '$category' ")->result();
+     $result = $this->db->query("SELECT * FROM test.test, test.question where question.category = '$category'  and test.id_test = '$category'")->result();
      return $result;
   }
 }
