@@ -25,6 +25,9 @@
       .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
       .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+      .botcls{
+        bottom: auto;
+      }
       </style>
   </head>
 
@@ -41,14 +44,14 @@
             <h4 class="my-0 font-weight-normal">РХБЗ</h4>
           </div>
           <div class="card-body">
-            <h3 class="card-title pricing-card-title">Тест по основам радиационной, химической и биологической защиты</h3>
-            <!-- <ul class="list-unstyled mt-3 mb-4">
-              <li>10 users included</li>
-              <li>2 GB of storage</li>
-              <li>Email support</li>
-              <li>Help center access</li>
-            </ul> -->
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Пройти тест</button>
+            <h4 class="">Тест по основам РХБЗ</h4>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Вы прошли тест:</li>
+              <li>Дата:результат</li>
+              <li>Дата:результат</li>
+              <li>Дата:результат</li>
+            </ul>
+            <a class="btn btn-lg btn-block btn-outline-primary botcls" href="#">Пройти тест</a>
           </div>
         </div>
 
@@ -59,18 +62,33 @@
             <h4 class="my-0 font-weight-normal">Огневая подготовка</h4>
           </div>
           <div class="card-body">
-            <h3 class="card-title pricing-card-title">Тест по основам огневой подготовки</h3>
-            <br><br>
-            <!-- <ul class="list-unstyled mt-3 mb-4">
-              <li>20 users included</li>
-              <li>10 GB of storage</li>
-              <li>Priority email support</li>
-              <li>Help center access</li>
-            </ul> -->
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Пройти тест</button>
+            <h4 class="card-title pricing-card-title">Тест по основам огневой подготовки</h4>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Вы прошли тест:</li>
+              <li>Дата:результат</li>
+              <li>Дата:результат</li>
+              <li>Дата:результат</li>
+            </ul>
+            <a class="btn btn-lg btn-block btn-outline-primary" href="#">Пройти тест</a>
           </div>
         </div>
 
+
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Огневая подготовка</h4>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title pricing-card-title">Тест по основам огневой подготовки</h4>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Вы прошли тест:</li>
+              <li>Дата:результат</li>
+              <li>Дата:результат</li>
+              <li>Дата:результат</li>
+            </ul>
+            <a class="btn btn-lg btn-block btn-outline-primary" href="#">Пройти тест</a>
+          </div>
+        </div>
 
 
         <!-- <div class="card mb-4 box-shadow">
