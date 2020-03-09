@@ -67,9 +67,7 @@
           <option value="<?php echo $value->id_people; ?>"><?php echo $value->rank . ' ' . $value->fio; ?></option>
         <?php endforeach; ?>
       </select>
-
-      <label for="inputPassword" class="sr-only">Пароль</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+      <input type="password" id="inputPassword" class="form-control" placeholder="Пароль">
       <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
     </form>
   </body>
