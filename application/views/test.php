@@ -28,31 +28,30 @@
 
   </head>
   <body class="bg-light">
-    <div class="container">
-  <div class="row">
-    <div class="col-md-8 order-md-1">
-      <h4 class="mb-3"><?php echo $test[0]->name; ?></h4> <!-- СЮДА ВСТАВИТЬ НАЗВАНИЕ ТЕСТА -->
-        <form>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3"><?php echo $test[0]->name; ?></h4> <!-- СЮДА ВСТАВИТЬ НАЗВАНИЕ ТЕСТА -->
+          <form id="idDataForm" method="post">
 
-          <?php foreach ($test as  $value): ?>
-            <div class="form-group">
-              <label><?php echo $value->question; ?></label>
-              <select class="form-control" name="<?php echo $value->id_test ?>">
-                <option value="<?php echo $value->correct_answer ?>"><?php echo $value->correct_answer ?></option>
-                <option value="<?php echo $value->answer_1 ?>"><?php echo $value->answer_1 ?></option>
-                <option value="<?php echo $value->answer_2 ?>"><?php echo $value->answer_2 ?></option>
-              </select>
-            </div>
-          <?php endforeach; ?>
+            <?php foreach ($test as  $value): ?>
+              <div class="form-group">
+                <label><?php echo $value->question; ?></label>
+                <select class="form-control" name="<?php echo $value->id_test ?>">
+                  <option value="<?php echo $value->correct_answer ?>"><?php echo $value->correct_answer ?></option>
+                  <option value="<?php echo $value->answer_1 ?>"><?php echo $value->answer_1 ?></option>
+                  <option value="<?php echo $value->answer_2 ?>"><?php echo $value->answer_2 ?></option>
+                </select>
+              </div>
+            <?php endforeach; ?>
 
-        </form>
+          </form>
 
-        <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Готово</button>
-      </form>
+          <hr class="mb-4">
+          <button class="btn btn-lg btn-block btn-outline-primary" type="submit" form="idDataForm" formaction="/amoncurs/Main_controllers/testValidate">Готово</button>
+      </div>
     </div>
   </div>
-</div>
 
       </body>
 </html>
